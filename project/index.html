@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks Project</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- <script src="mastar.js"></script> -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    
+    
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="tasks">
+                <h1>TASKS</h1>
+                <button><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <div class="cards" id="dateTasks">
+                <div class="card" id="tasks">
+                    <div class="info">
+                        <h2>I have a meeting</h2>
+                        <span><i class="fa-regular fa-calendar-days"></i>10/10/2023</span>
+                    </div>
+                    <div class="icons">
+                        <button><i class="fa-solid fa-pen-to-square"style="color: blue;"></i></button>
+                        <button><i class="fa-solid fa-check" style="color: green;" ></i></button>
+                        <button><i class="fa-solid fa-trash" style="color: red;"></i></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="info">
+                        <h2>I have a meeting</h2>
+                        <span><i class="fa-regular fa-calendar-days"></i>10/10/2023</span>
+                    </div>
+                    <div class="icons">
+                        <button><i class="fa-solid fa-pen-to-square"style="color: blue;"></i></button>
+                        <button><i class="fa-solid fa-check" style="color: green;" ></i></button>
+                        <button><i class="fa-solid fa-trash" style="color: red;"></i></button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="info">
+                        <h2>I have a meeting</h2>
+                        <span><i class="fa-regular fa-calendar-days"></i>10/10/2023</span>
+                    </div>
+                    <div class="icons">
+                        <button><i class="fa-solid fa-pen-to-square"style="color: blue;"></i></button>
+                        <button><i class="fa-solid fa-check" style="color: green;" ></i></button>
+                        <button><i class="fa-solid fa-trash" style="color: red;"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let task =  {
+        "title": "Meeting",
+        "date": "25/10/2023",
+        "isDone": false
+    }
+    document.getElementById("dateTasks").innerHTML = ""
+    let dateTasks = [
+    {
+        "title": "Meeting",
+        "date": "25/10/2023",
+        "isDone": false
+    },
+    {
+        "title": "Going to Work",
+        "date": "25/09/2023",
+        "isDone": true
+    },
+    {
+        "title": "Done Received",
+        "date": "31/09/2023",
+        "isDone": true
+    }
+    ]
+
+    for(task of dateTasks){
+        let content =   `
+                    <div class="card" id="tasks">
+                        <div class="info">
+                            <h2>${task.title}</h2>
+                            <span><i class="fa-regular fa-calendar-days"></i>${task.date}</span>
+                        </div>
+                        <div class="icons">
+                            <button><i class="fa-solid fa-pen-to-square"style="color: blue;"></i></button>
+                            <button><i class="fa-solid fa-check" style="color: green;" ></i></button>
+                            <button><i class="fa-solid fa-trash" style="color: red;"></i></button>
+                        </div>
+                    </div>
+                    `
+        document.getElementById("dateTasks").innerHTML += content
+    }
+   
+
+
+</script>
+</html>
